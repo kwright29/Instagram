@@ -20,6 +20,7 @@
 		EE3FE6A6286A4A3C008BF3E1 /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6A5286A4A3C008BF3E1 /* InstagramTests.m */; };
 		EE3FE6B0286A4A3C008BF3E1 /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6AF286A4A3C008BF3E1 /* InstagramUITests.m */; };
 		EE3FE6B2286A4A3C008BF3E1 /* InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6B1286A4A3C008BF3E1 /* InstagramUITestsLaunchTests.m */; };
+		EE3FE6BF286A61F7008BF3E1 /* instagram_assets in Resources */ = {isa = PBXBuildFile; fileRef = EE3FE6BE286A61F7008BF3E1 /* instagram_assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		EE3FE6AB286A4A3C008BF3E1 /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3FE6AF286A4A3C008BF3E1 /* InstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITests.m; sourceTree = "<group>"; };
 		EE3FE6B1286A4A3C008BF3E1 /* InstagramUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITestsLaunchTests.m; sourceTree = "<group>"; };
+		EE3FE6BE286A61F7008BF3E1 /* instagram_assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = instagram_assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,6 @@
 				AA56865D56BC57E33F6FBFA2 /* Pods-InstagramTests.debug.xcconfig */,
 				04FBBC0EF8BDA818F97AD02F /* Pods-InstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +153,7 @@
 				EE3FE68F286A4A3C008BF3E1 /* ViewController.h */,
 				EE3FE690286A4A3C008BF3E1 /* ViewController.m */,
 				EE3FE692286A4A3C008BF3E1 /* Main.storyboard */,
+				EE3FE6BE286A61F7008BF3E1 /* instagram_assets */,
 				EE3FE695286A4A3C008BF3E1 /* Assets.xcassets */,
 				EE3FE697286A4A3C008BF3E1 /* LaunchScreen.storyboard */,
 				EE3FE69A286A4A3C008BF3E1 /* Info.plist */,
@@ -285,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3FE6BF286A61F7008BF3E1 /* instagram_assets in Resources */,
 				EE3FE699286A4A3C008BF3E1 /* LaunchScreen.storyboard in Resources */,
 				EE3FE696286A4A3C008BF3E1 /* Assets.xcassets in Resources */,
 				EE3FE694286A4A3C008BF3E1 /* Main.storyboard in Resources */,

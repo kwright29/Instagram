@@ -25,7 +25,18 @@
             configuration.server = @"https://parseapi.back4app.com";
         }];
 
-        [Parse initializeWithConfiguration:config];
+    [Parse initializeWithConfiguration:config];
+//    PFObject *foodItem = [PFObject objectWithClassName:@"FoodItems"];
+//    foodItem[@"calories"] = @250;
+//    foodItem[@"is_spicy"] = @YES;
+//    foodItem[@"food_name"] = @"Bufallo Chicken";
+//    [foodItem saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"Object saved!");
+//        } else {
+//            NSLog(@"Error: %@", error.description);
+//        }
+//    }];
 
     
     return YES;
