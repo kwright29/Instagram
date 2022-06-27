@@ -44,6 +44,7 @@
             
             // display view controller that needs to shown after successful login
             [self goToTimeline];
+        
         }
     }];
     
@@ -107,8 +108,6 @@
 
 }
 - (void)goToTimeline {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    TimelineViewController *tlVC = [storyboard instantiateViewControllerWithIdentifier:@"tlVC"];
-    [self presentViewController:tlVC animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"loginSegue" sender:nil];
 }
 @end

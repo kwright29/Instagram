@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="qw5-Xa-Zkp">
             <objects>
-                <viewController id="pLF-FI-h9y" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pLF-FI-h9y" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PGq-7K-dxc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,13 @@
                         <viewLayoutGuide key="safeArea" id="Orx-WU-hZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q7m-gF-4SJ"/>
+                    <navigationItem key="navigationItem" id="Q7m-gF-4SJ">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="68k-fj-04a">
+                            <connections>
+                                <action selector="didTapLogout:" destination="P1U-wP-UWS" id="qxt-YU-P1a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La6-WL-EYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +92,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HsQ-DK-s9Q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="qFP-kV-HbE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNAVVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qFP-kV-HbE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dUQ-gz-JAZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvZ-0o-t3r">
@@ -95,7 +101,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="P1U-wP-UWS" kind="relationship" relationship="rootViewController" id="T8q-pi-IkY"/>
+                        <segue destination="P1U-wP-UWS" kind="relationship" relationship="rootViewController" id="Eih-Rz-tFw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhB-Rc-lhE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

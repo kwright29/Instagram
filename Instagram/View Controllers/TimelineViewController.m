@@ -6,6 +6,9 @@
 //
 
 #import "TimelineViewController.h"
+#import <Parse/Parse.h>
+#import "LoginViewController.h"
+#import "SceneDelegate.h"
 
 @interface TimelineViewController ()
 
@@ -27,5 +30,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)didTapLogout:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+    }];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+    sceneDelegate.window.rootViewController = loginVC;
+
+}
 
 @end
