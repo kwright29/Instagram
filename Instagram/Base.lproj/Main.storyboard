@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="77" y="-78"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Home Feed-->
         <scene sceneID="uen-fj-nxQ">
             <objects>
                 <viewController storyboardIdentifier="tlVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P1U-wP-UWS" customClass="TimelineViewController" sceneMemberID="viewController">
@@ -77,13 +77,13 @@
                         <viewLayoutGuide key="safeArea" id="Orx-WU-hZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q7m-gF-4SJ">
+                    <navigationItem key="navigationItem" title="Home Feed" id="Q7m-gF-4SJ">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="68k-fj-04a">
                             <connections>
                                 <action selector="didTapLogout:" destination="P1U-wP-UWS" id="qxt-YU-P1a"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post Photo" id="25w-9u-tjl">
+                        <barButtonItem key="rightBarButtonItem" title="Post Photo" image="insta_camera_btn" id="25w-9u-tjl">
                             <connections>
                                 <segue destination="XZu-Nq-UZS" kind="show" id="JTH-Fd-KiV"/>
                             </connections>
@@ -94,21 +94,46 @@
             </objects>
             <point key="canvasLocation" x="2113" y="-78"/>
         </scene>
-        <!--Photo Map View Controller-->
+        <!--New Post View Controller-->
         <scene sceneID="ODw-Ks-AnM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="XZu-Nq-UZS" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XZu-Nq-UZS" customClass="NewPostViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U2f-Mg-uPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VoE-xL-nje">
+                                <rect key="frame" x="51" y="81" width="312" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLD-F2-dgI">
+                                <rect key="frame" x="51" y="388" width="312" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOB-Yb-0PQ">
+                                <rect key="frame" x="77" y="124" width="258" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="didTapImageView:" destination="XZu-Nq-UZS" eventType="touchUpInside" id="xWB-kt-2BR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FeX-nz-g4f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bv3-fp-qZO"/>
+                    <connections>
+                        <outlet property="postCaption" destination="vLD-F2-dgI" id="htV-Ik-1CT"/>
+                        <outlet property="postImageView" destination="VoE-xL-nje" id="FYO-XZ-vQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffk-3Q-IxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3022" y="-78"/>
+            <point key="canvasLocation" x="3021.739130434783" y="-78.348214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HsQ-DK-s9Q">
@@ -131,6 +156,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

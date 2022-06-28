@@ -22,8 +22,8 @@
 		EE3FE6BF286A61F7008BF3E1 /* instagram_assets in Resources */ = {isa = PBXBuildFile; fileRef = EE3FE6BE286A61F7008BF3E1 /* instagram_assets */; };
 		EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */; };
 		EE3FE6C6286A6891008BF3E1 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */; };
-		EEAFEFAE286B70830095E090 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */; };
 		EEAFEFB3286B76100095E090 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFB2286B76100095E090 /* Post.m */; };
+		EEAFEFB6286B9D5A0095E090 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFB5286B9D5A0095E090 /* NewPostViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +73,10 @@
 		EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EE3FE6C4286A6891008BF3E1 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
-		EEAFEFAC286B70830095E090 /* PhotoMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMapViewController.h; sourceTree = "<group>"; };
-		EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
 		EEAFEFB1286B76100095E090 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		EEAFEFB2286B76100095E090 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		EEAFEFB4286B9D5A0095E090 /* NewPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		EEAFEFB5286B9D5A0095E090 /* NewPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +192,8 @@
 				EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */,
 				EE3FE6C4286A6891008BF3E1 /* TimelineViewController.h */,
 				EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */,
-				EEAFEFAC286B70830095E090 /* PhotoMapViewController.h */,
-				EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */,
+				EEAFEFB4286B9D5A0095E090 /* NewPostViewController.h */,
+				EEAFEFB5286B9D5A0095E090 /* NewPostViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEAFEFAE286B70830095E090 /* PhotoMapViewController.m in Sources */,
+				EEAFEFB6286B9D5A0095E090 /* NewPostViewController.m in Sources */,
 				EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */,
 				EE3FE68B286A4A3C008BF3E1 /* AppDelegate.m in Sources */,
 				EE3FE69C286A4A3C008BF3E1 /* main.m in Sources */,
@@ -640,17 +640,20 @@
 				DEVELOPMENT_TEAM = LL534K8W99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access to take pictures";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need library access to upload images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Instagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KhloeWright.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -668,17 +671,20 @@
 				DEVELOPMENT_TEAM = LL534K8W99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access to take pictures";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need library access to upload images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Instagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KhloeWright.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
