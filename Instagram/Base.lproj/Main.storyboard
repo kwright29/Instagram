@@ -83,11 +83,32 @@
                                 <action selector="didTapLogout:" destination="P1U-wP-UWS" id="qxt-YU-P1a"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post Photo" id="25w-9u-tjl">
+                            <connections>
+                                <segue destination="XZu-Nq-UZS" kind="show" id="JTH-Fd-KiV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La6-WL-EYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2113" y="-78"/>
+        </scene>
+        <!--Photo Map View Controller-->
+        <scene sceneID="ODw-Ks-AnM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="XZu-Nq-UZS" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2f-Mg-uPe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FeX-nz-g4f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bv3-fp-qZO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffk-3Q-IxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3022" y="-78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HsQ-DK-s9Q">

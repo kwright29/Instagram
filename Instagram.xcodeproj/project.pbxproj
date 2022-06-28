@@ -22,6 +22,8 @@
 		EE3FE6BF286A61F7008BF3E1 /* instagram_assets in Resources */ = {isa = PBXBuildFile; fileRef = EE3FE6BE286A61F7008BF3E1 /* instagram_assets */; };
 		EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */; };
 		EE3FE6C6286A6891008BF3E1 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */; };
+		EEAFEFAE286B70830095E090 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */; };
+		EEAFEFB3286B76100095E090 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFB2286B76100095E090 /* Post.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EE3FE6C4286A6891008BF3E1 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		EEAFEFAC286B70830095E090 /* PhotoMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMapViewController.h; sourceTree = "<group>"; };
+		EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
+		EEAFEFB1286B76100095E090 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		EEAFEFB2286B76100095E090 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,15 +155,13 @@
 		EE3FE688286A4A3C008BF3E1 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				EEAFEFB0286B75D50095E090 /* Delegates */,
+				EEAFEFAF286B75CB0095E090 /* Models */,
 				EE3FE6C0286A6494008BF3E1 /* View Controllers */,
-				EE3FE689286A4A3C008BF3E1 /* AppDelegate.h */,
-				EE3FE68A286A4A3C008BF3E1 /* AppDelegate.m */,
-				EE3FE68C286A4A3C008BF3E1 /* SceneDelegate.h */,
-				EE3FE68D286A4A3C008BF3E1 /* SceneDelegate.m */,
 				EE3FE692286A4A3C008BF3E1 /* Main.storyboard */,
+				EE3FE697286A4A3C008BF3E1 /* LaunchScreen.storyboard */,
 				EE3FE6BE286A61F7008BF3E1 /* instagram_assets */,
 				EE3FE695286A4A3C008BF3E1 /* Assets.xcassets */,
-				EE3FE697286A4A3C008BF3E1 /* LaunchScreen.storyboard */,
 				EE3FE69A286A4A3C008BF3E1 /* Info.plist */,
 				EE3FE69B286A4A3C008BF3E1 /* main.m */,
 			);
@@ -188,8 +192,30 @@
 				EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */,
 				EE3FE6C4286A6891008BF3E1 /* TimelineViewController.h */,
 				EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */,
+				EEAFEFAC286B70830095E090 /* PhotoMapViewController.h */,
+				EEAFEFAD286B70830095E090 /* PhotoMapViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EEAFEFAF286B75CB0095E090 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEAFEFB1286B76100095E090 /* Post.h */,
+				EEAFEFB2286B76100095E090 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEAFEFB0286B75D50095E090 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EE3FE689286A4A3C008BF3E1 /* AppDelegate.h */,
+				EE3FE68A286A4A3C008BF3E1 /* AppDelegate.m */,
+				EE3FE68C286A4A3C008BF3E1 /* SceneDelegate.h */,
+				EE3FE68D286A4A3C008BF3E1 /* SceneDelegate.m */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,11 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAFEFAE286B70830095E090 /* PhotoMapViewController.m in Sources */,
 				EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */,
 				EE3FE68B286A4A3C008BF3E1 /* AppDelegate.m in Sources */,
 				EE3FE69C286A4A3C008BF3E1 /* main.m in Sources */,
 				EE3FE68E286A4A3C008BF3E1 /* SceneDelegate.m in Sources */,
 				EE3FE6C6286A6891008BF3E1 /* TimelineViewController.m in Sources */,
+				EEAFEFB3286B76100095E090 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
