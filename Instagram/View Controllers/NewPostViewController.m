@@ -7,10 +7,13 @@
 
 #import "NewPostViewController.h"
 #import "Post.h"
+#import "TimelineViewController.h"
+
 
 @interface NewPostViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *postImageView;
 @property (strong, nonatomic) IBOutlet UITextField *postCaption;
+//@property (strong, nonatomic) Post *post;
 
 
 @end
@@ -20,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     
 }
 
@@ -109,16 +113,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera Not Avaiable"
                                                                                message:@"Camera is not available. Please use your photo library instead."
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];
-//        // create a cancel action
-//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-//                                                            style:UIAlertActionStyleCancel
-//                                                          handler:^(UIAlertAction * _Nonnull action) {
-//                                                                 // handle cancel response here. Doing nothing will dismiss the view.
-//                                                          }];
-//        // add the cancel action to the alertController
-//        [alert addAction:cancelAction];
 
-    // create an OK action
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
                                                        style:UIAlertActionStyleDefault
                                                      handler:^(UIAlertAction * _Nonnull action) {
@@ -131,6 +126,28 @@
         // optional code for what happens after the alert controller has finished presenting
     }];
 }
+- (IBAction)didTapShare:(id)sender {
+
+    [self makeNewPost];
+    [self.delegate didSharePost];    
+}
+
+- (void)makeNewPost {
+    
+    [Post postUserImage:self.postImageView.image withCaption:self.postCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            
+            NSLog(@"Post was sucessfully posted!");
+            
+        } else {
+            NSLog(@"Failure to upload post %@", error.description);
+        }
+
+    
+    }];
+}
+
+
 /*
 #pragma mark - Navigation
 

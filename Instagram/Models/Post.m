@@ -34,6 +34,7 @@
     newPost.commentCount = @(0);
     
     [newPost saveInBackgroundWithBlock: completion];
+    
 }
 
 + (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
@@ -48,10 +49,10 @@
     if (!imageData) {
         return nil;
     } else {
-        CGSize size = CGSizeMake(10.0, 10.0);
+        CGSize size = CGSizeMake(300.0, 300.0);
         image = [self resizeImage:image withSize:size];
     }
-    
+    imageData = UIImagePNGRepresentation(image);
     return [PFFileObject fileObjectWithName:@"image" data:imageData];
     
 }
