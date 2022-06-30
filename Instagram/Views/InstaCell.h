@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) Post *post;
 @property (strong, nonatomic) IBOutlet UILabel *postUsername;
 @property (strong, nonatomic) IBOutlet UIButton *likeButton;
+@property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 
 -(void)makePost:(Post *)post;
 

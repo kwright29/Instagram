@@ -22,6 +22,8 @@
 		EE3FE6BF286A61F7008BF3E1 /* instagram_assets in Resources */ = {isa = PBXBuildFile; fileRef = EE3FE6BE286A61F7008BF3E1 /* instagram_assets */; };
 		EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */; };
 		EE3FE6C6286A6891008BF3E1 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */; };
+		EE46F271286E5E7D0084B0F7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46F270286E5E7D0084B0F7 /* ProfileViewController.m */; };
+		EE46F274286E5FF90084B0F7 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46F273286E5FF90084B0F7 /* PostCell.m */; };
 		EE48FB22286E1FEF00EE5531 /* PostDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE48FB21286E1FEF00EE5531 /* PostDetailsViewController.m */; };
 		EEAFEFB3286B76100095E090 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFB2286B76100095E090 /* Post.m */; };
 		EEAFEFB6286B9D5A0095E090 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAFEFB5286B9D5A0095E090 /* NewPostViewController.m */; };
@@ -75,6 +77,10 @@
 		EE3FE6C2286A64AA008BF3E1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EE3FE6C4286A6891008BF3E1 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		EE3FE6C5286A6891008BF3E1 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		EE46F26F286E5E7D0084B0F7 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		EE46F270286E5E7D0084B0F7 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		EE46F272286E5FF90084B0F7 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		EE46F273286E5FF90084B0F7 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		EE48FB20286E1FEF00EE5531 /* PostDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostDetailsViewController.h; sourceTree = "<group>"; };
 		EE48FB21286E1FEF00EE5531 /* PostDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostDetailsViewController.m; sourceTree = "<group>"; };
 		EE65879A286CF26800B4AA1E /* PostDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostDelegate.h; sourceTree = "<group>"; };
@@ -204,6 +210,8 @@
 				EEAFEFB5286B9D5A0095E090 /* NewPostViewController.m */,
 				EE48FB20286E1FEF00EE5531 /* PostDetailsViewController.h */,
 				EE48FB21286E1FEF00EE5531 /* PostDetailsViewController.m */,
+				EE46F26F286E5E7D0084B0F7 /* ProfileViewController.h */,
+				EE46F270286E5E7D0084B0F7 /* ProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -213,6 +221,8 @@
 			children = (
 				EEAFEFB7286BCED10095E090 /* InstaCell.h */,
 				EEAFEFB8286BCED10095E090 /* InstaCell.m */,
+				EE46F272286E5FF90084B0F7 /* PostCell.h */,
+				EE46F273286E5FF90084B0F7 /* PostCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,10 +487,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE46F274286E5FF90084B0F7 /* PostCell.m in Sources */,
 				EEAFEFB6286B9D5A0095E090 /* NewPostViewController.m in Sources */,
 				EE3FE6C3286A64AA008BF3E1 /* LoginViewController.m in Sources */,
 				EE3FE68B286A4A3C008BF3E1 /* AppDelegate.m in Sources */,
 				EE3FE69C286A4A3C008BF3E1 /* main.m in Sources */,
+				EE46F271286E5E7D0084B0F7 /* ProfileViewController.m in Sources */,
 				EE3FE68E286A4A3C008BF3E1 /* SceneDelegate.m in Sources */,
 				EEAFEFB9286BCED10095E090 /* InstaCell.m in Sources */,
 				EE3FE6C6286A6891008BF3E1 /* TimelineViewController.m in Sources */,

@@ -35,7 +35,7 @@
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
     newPost.liked = NO;
-    
+    newPost.userID = newPost.author.objectId;
     
     [newPost saveInBackgroundWithBlock: completion];
     

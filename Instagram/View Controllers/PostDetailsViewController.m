@@ -7,6 +7,7 @@
 
 #import "PostDetailsViewController.h"
 #import "TimelineViewController.h"
+#import "DateTools.h"
 
 @interface PostDetailsViewController ()
 
@@ -22,8 +23,9 @@
     
     NSString *caption = [username stringByAppendingString:_postDetails.caption];
     _detailsCaption.text = caption;
-    
-    _detailsTime.text = [[TimelineViewController new] formatDate:_postDetails.createdAt];
+    NSString *shortDate = [_postDetails.createdAt shortTimeAgoSinceNow];
+    _detailsTime.text = [NSString stringWithFormat:@"%@ ago", shortDate];
+    //_detailsTime.text = [[TimelineViewController new] formatDate:_postDetails.createdAt];
     _detailsImageView.file = _postDetails.image;
     [_detailsImageView loadInBackground];
 }

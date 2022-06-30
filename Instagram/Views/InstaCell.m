@@ -6,6 +6,7 @@
 //
 
 #import "InstaCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation InstaCell
 
@@ -27,6 +28,8 @@
     self.postUsername.text = username;
     self.postImage.file = post[@"image"];
     [self.postImage loadInBackground];
+    PFFileObject *userPic = post.author[@"profilePicture"];
+    [self.profilePicture setImageWithURL:[NSURL URLWithString:userPic.url]];
 }
 - (IBAction)didTapLike:(id)sender {
    
