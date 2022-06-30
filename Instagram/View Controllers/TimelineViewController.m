@@ -108,4 +108,17 @@
     [self.tableView reloadData];
 }
 
+- (NSString *)formatDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterNoStyle;
+    
+    NSString *dateToString = [[NSString alloc]init];
+    dateToString = [formatter stringFromDate:date];
+    
+    return dateToString;
+}
+
+
 @end

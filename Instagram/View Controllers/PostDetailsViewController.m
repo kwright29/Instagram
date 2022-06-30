@@ -6,6 +6,7 @@
 //
 
 #import "PostDetailsViewController.h"
+#import "TimelineViewController.h"
 
 @interface PostDetailsViewController ()
 
@@ -22,7 +23,9 @@
     NSString *caption = [username stringByAppendingString:_postDetails.caption];
     _detailsCaption.text = caption;
     
-   
+    _detailsTime.text = [[TimelineViewController new] formatDate:_postDetails.createdAt];
+    _detailsImageView.file = _postDetails.image;
+    [_detailsImageView loadInBackground];
 }
 
 /*
