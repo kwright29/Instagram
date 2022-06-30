@@ -13,6 +13,7 @@
 #import "Post.h"
 #import "PostDelegate.h"
 #import "NewPostViewController.h"
+#import "PostDetailsViewController.h"
 
 @interface TimelineViewController () <UITableViewDataSource, PostDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -43,29 +44,16 @@
         NewPostViewController *postVC = [segue destinationViewController];
         postVC.delegate = self;
     }
+    if ([[segue identifier] isEqualToString:@"detailsSegue"]) {
+        PostDetailsViewController *detailsVC = [segue destinationViewController];
+        NSIndexPath *myIndexPath = [self.tableView indexPathForCell:sender];
+        Post *postToExpand = self.posts[myIndexPath.row];
+        detailsVC.postDetails = postToExpand;
+    }
 }
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
-//    // Create NSURL and NSURLRequest
-//
-//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-//                                                          delegate:nil
-//                                                     delegateQueue:[NSOperationQueue mainQueue]];
-//    session.configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-//
-//    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-//                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//
-//       // ... Use the new data to update the data source ...
-//
-//       // Reload the tableView now that there is new data
-//        [self.tableView reloadData];
-//
-//       // Tell the refreshControl to stop spinning
-//        [refreshControl endRefreshing];
-//
-//    }];
+
     [self retrievePosts];
-    //[task resume];
 }
 
 - (void)retrievePosts {

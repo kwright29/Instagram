@@ -23,10 +23,13 @@
 - (void)makePost:(Post *)post {
     self.post = post;
     self.postCaption.text = self.post.caption;
-    NSString *username = [NSString stringWithFormat:@"@%@", self.post.author[@"username"]];
+    NSString *username = [NSString stringWithFormat:@"@%@", self.post.author.username];
     self.postUsername.text = username;
     self.postImage.file = post[@"image"];
     [self.postImage loadInBackground];
+}
+- (IBAction)didTapLike:(id)sender {
+   
 }
 
 @end

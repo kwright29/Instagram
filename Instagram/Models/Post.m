@@ -16,7 +16,9 @@
 @dynamic image;
 @dynamic likeCount;
 @dynamic commentCount;
-
+@dynamic liked;
+@dynamic dateToFormat;
+@dynamic createdAtString;
 
 
 
@@ -32,8 +34,12 @@
     newPost.caption = caption;
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
+    newPost.liked = NO;
+    
     
     [newPost saveInBackgroundWithBlock: completion];
+    
+    
     
 }
 
