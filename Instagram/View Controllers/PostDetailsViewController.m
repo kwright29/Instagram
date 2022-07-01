@@ -21,7 +21,7 @@
     NSString *username = [NSString stringWithFormat:@"@%@", _postDetails.author.username];
     _detailsUsername.text = username;
     
-    NSString *caption = [username stringByAppendingString:_postDetails.caption];
+    NSString *caption = [NSString stringWithFormat:@"%@: %@", username, _postDetails.caption];
     _detailsCaption.text = caption;
     NSString *shortDate = [_postDetails.createdAt shortTimeAgoSinceNow];
     _detailsTime.text = [NSString stringWithFormat:@"%@ ago", shortDate];

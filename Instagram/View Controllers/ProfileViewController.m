@@ -7,6 +7,7 @@
 
 #import "ProfileViewController.h"
 #import "Post.h"
+#import "PostCell.h"
 
 @interface ProfileViewController ()  <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -43,16 +44,38 @@
 }
 */
 
-//- (void)getUserPosts {
-//
-//}
-//- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-//
-//}
-//
-//- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//    
-//}
+- (void)retrievePosts {
+    //construct PFQuery
+    PFQuery *postQuery = [Post query];
+    [postQuery orderByDescending:@"createdAt"];
+    [postQuery includeKey:@"author"];
+    postQuery.limit = 20;
+    
+    //fetch data asynchronously
+    [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
+        if (posts) {
+            // do something with the data fetched
+            self.userPosts = (NSMutableArray *)posts;
+            
+        }
+        else {
+            // handle error
+            NSLog(@"Problem retrieving posts: %@", error.localizedDescription);
+        }
+    }];
+    
+}
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+        PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
+        Post *post = self.userPosts[indexPath.row];
+        cell.cellImageView.file = post[@"image"];
+        [cell.cellImageView loadInBackground];
+        return cell;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.userPosts.count;
+}
 
 
 
